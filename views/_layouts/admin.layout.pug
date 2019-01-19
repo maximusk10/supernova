@@ -1,10 +1,11 @@
-//- admin.layout.pug
 html
   head
     title SupernovaCMS - #{locals.site.title}
     block scripts
       script(src='/main.js')
   body
+    block sidebar
+      include ../_components/sidebar.pug
     block content
     block foot
       #footer
