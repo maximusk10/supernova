@@ -1,43 +1,49 @@
-const path = require("path");
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const webpack = require('webpack');
+//const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+var path = require("path");
 
 module.exports = {
-    entry: ["./assets/js/app.js"],
+    entry: ['./assets/js/app.js', './assets/scss/admin.scss', './assets/scss/main.scss'],
+    mode: 'production',//change to 'development' for non minified js
     output: {
-        filename: "[name].bundle.js",
-        path: path.resolve(__dirname, "./static")
+        path: path.resolve(__dirname, "static"),
+        filename: '[name].js',
+        publicPath: "/static"
     },
+    watch: true,
     module: {
         rules: [
             {
-                test: /\.scss$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "sass-loader"
-                ]
+                test: /.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
             },
             {
-                test: /\.jsx?$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                    options: {
-                        presets: ['babel-preset-env']
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].css',
+                            context: './',
+                            outputPath: '/',
+                            publicPath: '/dist'
+                        }
+                    },
+                    {
+                        loader: 'extract-loader'
+                    },
+                    {
+                        loader: 'css-loader',
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
                     }
-                }
+                ]
             },
-
-        ]
+        ],
     },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: "[name].css",
-            chunkFilename: "[id].css"
-        }),
-        new UglifyJSPlugin()
-    ],
-    mode: 'production'
 };

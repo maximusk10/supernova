@@ -1,11 +1,12 @@
 //- admin.layout.pug
 html
   head
-    title My Site - #{title}
+    title SupernovaCMS - #{locals.site.title}
     block scripts
-      script(src='/main.bundle.js')
+      script(src='/main.js')
   body
     block content
     block foot
       #footer
         p some footer content
+    link(rel="stylesheet", href="/admin.css")
