@@ -1,6 +1,28 @@
 @import "reset";
+@import "mixins";
 
 body {
     background: tomato;
     font-size: 40px;
+    font-family: $font-1;
+    font-size: 16px;
 }
+
+.Container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.w_Content {
+    align-content: space-between;
+    background: #DDE7E8;
+    display: flex;
+    flex: $content-width;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+@import "admin/sidebar";
+@import "admin/content";
+@import "admin/footer";
+

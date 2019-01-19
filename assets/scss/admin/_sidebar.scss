@@ -1,0 +1,60 @@
+.w_Sidebar {   
+    background: $dark-1;
+    flex: $sidebar-width;
+    font-family: $font-2;
+    min-height: 100vh;
+}
+.Sidebar {
+    color: white;
+}
+.Sidebar__Logo {
+
+}
+.Sidebar__Logo--text {
+    font-size: 32px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.Sidebar__Profile { 
+    background: #151515;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+.Profile__Avatar { 
+    width: 100%;
+    img {
+        box-shadow: 0 3px 6px rgba(black, .16);
+        border-radius: 50%;
+        max-width: 100%;
+        width: 150px;
+    }
+}
+.Profile__Username { 
+    color: $orange;
+    font-size: 25px;
+    padding: 10px 0 20px;
+    border-bottom: 1px solid rgba(white,.08);
+    width: 80%;
+    margin: 0 auto;
+}
+.Profile__LogoutBtn { 
+    padding: 20px 0;
+    a {
+        color: white;
+        display: block;
+        text-decoration: none;
+    }
+
+}
+
+
+// Helpers
+.h_LogoText {
+    color: $orange;
+}
+.h_LogoTextLight {
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,17 @@
+// Variables
+$max-width: 1600px;
+// Flex metering
+$sidebar-width: 3;
+$content-width: 12;
+// Colors
+$dark-1: #1C2324;
+$orange: #D86D1A;
+// Font-family
+$font-1: 'Open Sans', serif;
+$font-2: 'Quicksand', serif;
+
+// Max-width content
+%content_wrapper {
+    max-width: $max-width;
+    margin: 0 auto;
+}

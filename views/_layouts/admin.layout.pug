@@ -2,12 +2,16 @@ html
   head
     title SupernovaCMS - #{locals.site.title}
     block scripts
+      link(href="https://fonts.googleapis.com/css?family=Quicksand:400,700", rel="stylesheet")
+      link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700", rel="stylesheet")
       script(src='/main.js')
   body
-    block sidebar
-      include ../_components/sidebar.pug
-    block content
-    block foot
-      #footer
-        p some footer content
+    .Container
+      block sidebar
+        include ../_components/admin_sidebar.pug
+      block main
+        .w_Content
+          block content
+          block footer
+            include ../_components/admin_footer.pug
     link(rel="stylesheet", href="/admin.css")
