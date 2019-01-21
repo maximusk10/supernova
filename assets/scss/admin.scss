@@ -2,7 +2,7 @@
 @import "mixins";
 
 body {
-    background: tomato;
+    background: #1C2324;
     font-size: 40px;
     font-family: $font-1;
     font-size: 16px;
@@ -25,4 +25,4 @@ body {
 @import "admin/sidebar";
 @import "admin/content";
 @import "admin/footer";
-
+@import "admin/login";

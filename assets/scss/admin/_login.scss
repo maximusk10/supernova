@@ -1,0 +1,65 @@
+.Login__Body {
+
+}
+.w_Login__Header {
+    background: #151515;
+    text-align: center;
+    width: 100%;
+}
+.Login__Header {
+    padding:20px 0;
+}
+.Login__Logo--text {
+    font-size: 32px;
+}
+.Login__Block {
+    background: $dark-2;
+    margin: 60px auto;
+    max-width: 480px;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+.Login__Avatar {
+    border-bottom: 1px solid rgba(white,.2);
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 90%;
+    img {
+        max-width: 150px;
+        border-radius: 50%;
+    }
+}
+.Login__Form {
+    display: block;
+    padding: 20px 0;
+}
+.Login__FormElement {
+
+}
+.Login__FormLabel {
+    display: block;
+    color: $orange;
+    font-size: 14px;
+    text-align: left;
+    margin: 5px 0;
+    width: 90%;
+}
+.Login__FormElement {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+}
+.Login__FormInput {
+    @extend %form_input;
+}
+.Login__Submit {
+    @extend %btn_format;
+    @extend %transition;
+    padding: 15px 40px;
+    width: 100%;
+    max-width: 50%;
+    &:hover {
+        background: darken($blue-1, 5%);
+    }
+}

@@ -5,7 +5,9 @@ $sidebar-width: 3;
 $content-width: 12;
 // Colors
 $dark-1: #1C2324;
+$dark-2: #151515;
 $orange: #D86D1A;
+$blue-1: #376F77;
 // Font-family
 $font-1: 'Open Sans', serif;
 $font-2: 'Quicksand', serif;
@@ -14,4 +16,33 @@ $font-2: 'Quicksand', serif;
 %content_wrapper {
     max-width: $max-width;
     margin: 0 auto;
+}
+
+%form_input {
+    background: white;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 0 3px 6px rgba(black, .16);
+    color: $dark-1;
+    font-size: 18px;
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+}
+
+%btn_format {
+    background: $blue-1; 
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 0 3px 6px rgba(black, .16);    
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+%transition {
+    transition: .15s ease-in;
 }

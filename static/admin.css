@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -33,8 +33,40 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important; }
+
+.Login__FormInput {
+  background: white;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  color: #1C2324;
+  font-size: 18px;
+  margin: 10px auto;
+  padding: 10px;
+  width: 100%; }
+
+.Login__Submit {
+  background: #376F77;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px; }
+
+.Login__Submit {
+  transition: .15s ease-in; }
+
 body {
-  background: tomato;
+  background: #1C2324;
   font-size: 40px;
   font-family: "Open Sans", serif;
   font-size: 16px; }
@@ -110,3 +142,55 @@ body {
 
 .Footer {
   background: red; }
+
+.w_Login__Header {
+  background: #151515;
+  text-align: center;
+  width: 100%; }
+
+.Login__Header {
+  padding: 20px 0; }
+
+.Login__Logo--text {
+  font-size: 32px; }
+
+.Login__Block {
+  background: #151515;
+  margin: 60px auto;
+  max-width: 480px;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%; }
+
+.Login__Avatar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 90%; }
+  .Login__Avatar img {
+    max-width: 150px;
+    border-radius: 50%; }
+
+.Login__Form {
+  display: block;
+  padding: 20px 0; }
+
+.Login__FormLabel {
+  display: block;
+  color: #D86D1A;
+  font-size: 14px;
+  text-align: left;
+  margin: 5px 0;
+  width: 90%; }
+
+.Login__FormElement {
+  text-align: center;
+  margin: 0 auto;
+  width: 90%; }
+
+.Login__Submit {
+  padding: 15px 40px;
+  width: 100%;
+  max-width: 50%; }
+  .Login__Submit:hover {
+    background: #2f5f66; }
