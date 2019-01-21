@@ -3,11 +3,10 @@ const express = require('express'),
     session = require('express-session'),
     bodyParser = require('body-parser'),
     path = require('path'),
-    compression = require('compression'),
-    { Client } = require('pg')
+    compression = require('compression')
+    
 // Local dependencies
-const conn = require('./connectionData')
-
+const routes = require('./routes')
 // Load .env
 require('dotenv').config()
 
@@ -16,18 +15,8 @@ const IS_PRODUCTION = process.env.NODE_ENV == 'production'
 
 // Bootstrap app
 const app = express()
-// Load db config
-const client = new Client(conn)
 
-const isLoginMiddleware = (req, res, next) => {
-    if (req.session && req.session.userId) {
-        return next();
-    } else {
-        var err = new Error('You must be logged in to view this page.');
-        err.status = 401;
-        return next(err);
-    }
-}
+
 // Session config
 app.use(session({
     name: process.env.SESS_NAME,
@@ -66,51 +55,8 @@ app.locals = {
     }
 };
 
-// Routes
-app.get('/', function(req, res, next) {
-  if (req.session.views) {
-    req.session.views++
-    res.setHeader('Content-Type', 'text/html')
-    res.write('<p>views: ' + req.session.views + '</p>')
-    res.write('<p>expires in: ' + (req.session.cookie.maxAge / 1000) + 's</p>')
-    res.end()
-  } else {
-    req.session.views = 1
-    res.end('welcome to the session demo. refresh!')
-  }
-})
-app.get('/admin', isLoginMiddleware,  (req, res)=> {
-    res.render('admin/index')
-})
-
-app.get('/login', (req, res) => {
-    res.render('admin/login')
-})
-
-app.post('/login', (req, res) => {
-    let string = `${req.body.txtEmail} - ${req.body.txtPassword}`
-    res.send(string)
-})
-
-app.get('/logout', (req, res) => {
-
-})
-
-app.get('/register', (req, res) => {
-
-})
-
-app.get('/testDb', (req, res) => {
-    client.connect()
-    client.query('SELECT id, name FROM public.usuario;')
-        .then(res => {
-            console.log(res.rows)
-        })
-        .catch(err => {
-            console.log('Error: ', err)
-        })
-    res.send('completed')
-})
+// Load Router
+app.use('/', routes)
 
 // Deploy Server
 app.listen(process.env.PORT, () => {
