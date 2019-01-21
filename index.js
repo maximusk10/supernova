@@ -1,7 +1,12 @@
 // Load dependencies
-const express = require('express')
-const session = require('express-session')
-const bodyParser = require('body-parser')
+const express = require('express'),
+    session = require('express-session'),
+    bodyParser = require('body-parser'),
+    path = require('path'),
+    compression = require('compression'),
+    { Client } = require('pg')
+// Local dependencies
+const conn = require('./connectionData')
 
 // Load .env
 require('dotenv').config()
@@ -10,10 +15,9 @@ require('dotenv').config()
 const IS_PRODUCTION = process.env.NODE_ENV == 'production' 
 
 // Bootstrap app
-const app = express(),
-      path = require('path'),
-      compression = require('compression'),
-      url = require('url');
+const app = express()
+// Load db config
+const client = new Client(conn)
 
 const isLoginMiddleware = (req, res, next) => {
     if (req.session && req.session.userId) {
@@ -94,6 +98,18 @@ app.get('/logout', (req, res) => {
 
 app.get('/register', (req, res) => {
 
+})
+
+app.get('/testDb', (req, res) => {
+    client.connect()
+    client.query('SELECT id, name FROM public.usuario;')
+        .then(res => {
+            console.log(res.rows)
+        })
+        .catch(err => {
+            console.log('Error: ', err)
+        })
+    res.send('completed')
 })
 
 // Deploy Server
