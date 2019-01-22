@@ -3,10 +3,12 @@ const express = require('express'),
     session = require('express-session'),
     bodyParser = require('body-parser'),
     path = require('path'),
-    compression = require('compression')
+    compression = require('compression'),
+    pgSession = require('connect-pg-simple')(session);
     
 // Local dependencies
 const routes = require('./routes')
+const pool = require('./contollers/middleware/connectionData')
 // Load .env
 require('dotenv').config()
 
@@ -20,13 +22,15 @@ const app = express()
 // Session config
 app.use(session({
     name: process.env.SESS_NAME,
-    store: new (require('connect-pg-simple')(session))(),
+    store: new pgSession({
+        pool: pool,
+        tableName: 'session'
+    }),
     resave: false,
     saveUninitialized: false,
     secret: process.env.SESS_KEY,
     cookie: {
         maxAge: 600000,
-        sameSite: true,
         secure: IS_PRODUCTION
     }
 

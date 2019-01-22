@@ -3,6 +3,7 @@ const { Client } = require('pg')
 
 // Load db config
 const conn = require('./middleware/connectionData')
+const isAuth = require('./middleware/isAuth')
 const client = new Client(conn)
 
 
