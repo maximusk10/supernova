@@ -9,3 +9,28 @@ div.w_Sidebar
                 p.h_userName
             .Profile__LogoutBtn
                 a(href="/logout") Logout
+        nav.Sidebar__Menu
+            ul.Sidebar__List
+                li.Sidebar__Element
+                    a.Sidebar__LinkElement(href="/admin") <i class="fas fa-home"></i> Dashboard
+                li.Sidebar__Element
+                    a.Sidebar__LinkElement(href="/admin/page-manager") <i class="fas fa-pen"></i> Pages
+                    ul.Sidebar__Submenu
+                        li.Sidebar__SubmenuElement
+                            a.Sidebar__SubmenuLink(href="/admin/page-add") Add New Page
+                        li.Sidebar__SubmenuElement
+                            a.Sidebar__SubmenuLink(href="/admin/page-manager") Page Manager
+                li.Sidebar__Element
+                    a.Sidebar__LinkElement(href="/admin/options-site") <i class="fas fa-cog"></i> General Options
+                    ul.Sidebar__Submenu
+                        li.Sidebar__SubmenuElement
+                            a.Sidebar__SubmenuLink(href="/admin/options-site") Site Options
+                        li.Sidebar__SubmenuElement
+                            a.Sidebar__SubmenuLink(href="/admin/options-ssl") SSL Options
+                li.Sidebar__Element
+                    a.Sidebar__LinkElement(href="/admin/media-manager") <i class="fas fa-cloud-upload-alt"></i> Media
+                    ul.Sidebar__Submenu
+                        li.Sidebar__SubmenuElement
+                            a.Sidebar__SubmenuLink(href="/admin/media-add") Add Files
+                        li.Sidebar__SubmenuElement
+                            a.Sidebar__SubmenuLink(href="/admin/media-manager") File manager

@@ -127,6 +127,50 @@ body {
     display: block;
     text-decoration: none; }
 
+.Sidebar__Menu {
+  padding-bottom: 50px;
+  width: 100%; }
+
+.Sidebar__List {
+  width: 100%; }
+
+.Sidebar__Element {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: block;
+  width: 100%; }
+  .Sidebar__Element i {
+    color: #D86D1A;
+    font-size: 18px;
+    padding-right: 5px; }
+
+.Sidebar__LinkElement {
+  color: white;
+  display: block;
+  margin: 15px auto;
+  font-size: 15px;
+  text-decoration: none;
+  width: 90%; }
+
+.Sidebar__Submenu {
+  margin: 0; }
+
+.Sidebar__SubmenuElement {
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.24);
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+  .Sidebar__SubmenuElement:nth-last-child(1) .Sidebar__SubmenuLink {
+    border-bottom: 1px solid rgba(255, 255, 255, 0); }
+
+.Sidebar__SubmenuLink {
+  color: white;
+  display: block;
+  font-size: 14px;
+  padding: 10px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09); }
+
 .h_LogoText {
   color: #D86D1A; }
 
@@ -141,7 +185,7 @@ body {
   flex: 12; }
 
 .Footer {
-  background: red; }
+  background: #C5CDCE; }
 
 .w_Login__Header {
   background: #151515;

@@ -49,6 +49,55 @@
 
 }
 
+.Sidebar__Menu {
+    padding-bottom: 50px;
+    width: 100%;
+}
+.Sidebar__List {
+    width: 100%;
+}
+.Sidebar__Element {
+    border-bottom: 1px solid rgba(white,.05);
+    display: block;
+    
+    width: 100%;
+    i {
+        color: $orange;
+        font-size: 18px;
+        padding-right: 5px;
+    }
+}
+.Sidebar__LinkElement {
+    color: white;
+    display: block;
+    margin: 15px auto;
+    font-size: 15px;
+    text-decoration: none;
+    width: 90%;
+}
+.Sidebar__Submenu {
+    margin: 0;
+
+}
+.Sidebar__SubmenuElement {
+    padding: 10px 0;
+    background: rgba(black, .24);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    &:nth-last-child(1) .Sidebar__SubmenuLink {
+        border-bottom: 1px solid rgba(white, 0);
+    }
+}
+.Sidebar__SubmenuLink {
+    color: white;
+    display: block;
+    font-size: 14px;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(white,.09);
+    
+}
 
 // Helpers
 .h_LogoText {
