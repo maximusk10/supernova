@@ -5,15 +5,16 @@ const auth = require('./contollers/auth')
 const site = require('./contollers/site')
 
 const isAuthMiddleware = require('./contollers/middleware/isAuth')
+const sessionExists = require('./contollers/middleware/sessionExists')
+
 // Routes
 router.get('/', site.getIndex)
 router.get('/admin', isAuthMiddleware, site.getAdmin)
 // Auth
-router.get('/login', auth.getLogin)
-router.post('/login', auth.postLogin)
+router.get('/login', sessionExists, auth.getLogin)
+router.post('/login', sessionExists, auth.postLogin)
 router.get('/logout', auth.logout)
-router.get('/register', auth.register)
-
-router.get('/testDb', site.testDb)
+router.get('/register', sessionExists, auth.register)
+router.post('/register', sessionExists, auth.postRegister)
 
 module.exports = router

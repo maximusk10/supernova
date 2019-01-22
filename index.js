@@ -56,6 +56,9 @@ app.locals = {
     author: {
         name: 'Dario Promoneti',
         contact: process.env.EMAIL
+    },
+    admin: {
+
     }
 };
 

@@ -1,5 +1,5 @@
 module.exports = (req, res, next) => {
-    if (req.session && req.session.idx) {
+    if (req.session && req.session.email) {
         return next();
     } else {
         var err = new Error('You must be logged in to view this page.');

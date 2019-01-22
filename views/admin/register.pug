@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="robots", content="noindex, nofollow")
+        title #{locals.site.title} - Site Login
+        link(href="https://fonts.googleapis.com/css?family=Quicksand:400,700", rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700", rel="stylesheet")
+        link(rel="stylesheet", href="/admin.css")
+
+    body.Login__Body
+        .w_Login__Header
+            header.Login__Header
+                h1.Login__Logo--text <span class="h_LogoText">supernova</span><span class="h_LogoTextLight">CMS</span>
+        section.Login__Block
+            .Login__Avatar
+                img(src="/bullet-club.jpg")
+            form.Login__Form(action="/register", method="POST")
+                .Login__FormElement
+                    label.Login__FormLabel(for="penek") Email
+                    input.Login__FormInput(type="text", name="txtEmail")
+                .Login__FormElement
+                    label.Login__FormLabel(for="penek") Name
+                    input.Login__FormInput(type="text", name="txtName")
+                .Login__FormElement
+                    label.Login__FormLabel(for="penek") Password
+                    input.Login__FormInput(type="password", name="txtPassword")
+                .Login__FormElement
+                    label.Login__FormLabel(for="penek") Repeat Password
+                    input.Login__FormInput(type="password", name="txtPasswordRepeat")
+                .Login__FormElement
+                    button.Login__Submit(type="submit") Register
