@@ -1,0 +1,20 @@
+extends ../_layouts/admin.layout.pug
+
+block content
+    main.Content
+        section.w_SiteOptions
+            .Content__Title
+                h1 Server Options
+                
+            .SiteOptions__Form
+                .SiteOptions__Subtitle
+                    h2  Generate SSL Certificate
+                    p.h_warn Please use this option only when the site is ready for production, and a domain has been configured
+                
+                .FormElement.h_30pxSeparator
+                    label.FormLabel Site Domain
+                    p.FormDescription The Website Name for Multiple Purposes
+                    input.FormInput
+                .SiteOptions__w_SaveButton
+                    button.SiteOptions__SaveButton Generate SSL  
+                

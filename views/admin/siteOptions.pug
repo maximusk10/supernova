@@ -1,0 +1,76 @@
+extends ../_layouts/admin.layout.pug
+
+block content
+    main.Content
+        section.w_SiteOptions
+            .Content__Title
+                h1 Site Options
+            form.SiteOptions__Form
+                .FormElement.h_30pxSeparator
+                    label.FormLabel Website Name
+                    p.FormDescription The Website Name for Multiple Purposes
+                    input.FormInput
+                .FormElement.h_30pxSeparator
+                    label.FormLabel Index Page H1
+                    p.FormDescription The text to use in h1 tag in Index
+                    input.FormInput
+                .FormElement.h_30pxSeparator
+                    label.FormLabel Google Analytics Code
+                    p.FormDescription Script code for google analytics
+                    textarea.FormInput
+                
+                .SiteOptions__Subtitle
+                    h2  SEO and Social Media Options
+                
+                .FormElement.h_30pxSeparator
+                    label.FormLabel Index Meta Description
+                    p.FormDescription Meta description to use in search engine results and Open Graph/Twitter description
+                    textarea.FormInput
+                .FormElement.h_30pxSeparator
+                    label.FormLabel Open Graph/ Twitter Title
+                    p.FormDescription Title to show in OG and Twitter
+                    textarea.FormInput
+                .FormElement.h_30pxSeparator
+                    label.FormLabel Open Graph/Twitter Image
+                    p.FormDescription Select the image to show when the index is posted on Social Media
+                    textarea.FormInput
+                .FormElement.h_30pxSeparator
+                    label.FormLabel Site Language
+                    p.FormDescription Select the content language of the website
+                    select.FormInput
+                        option es_ES
+                        option en_US
+                .FormElement.h_30pxSeparator
+                    label.FormLabel Index Meta Description
+                    p.FormDescription Meta description to use in search engine results and Open Graph/Twitter description
+                    textarea.FormInput
+                
+                .SiteOptions__Subtitle
+                    h2  Google Adsense Blocks
+                .FormElement.h_30pxSeparator
+                    label.FormLabel Google Adsense Code 1
+                    p.FormDescription Index After Title
+                    textarea.FormInput
+                .FormElement.h_30pxSeparator
+                    label.FormLabel Google Adsense Code 2
+                    p.FormDescription Index Footer
+                    textarea.FormInput
+                .FormElement.h_30pxSeparator
+                    label.FormLabel Google Adsense Code 3
+                    p.FormDescription Index Sidebar
+                    textarea.FormInput
+                .FormElement.h_30pxSeparator
+                    label.FormLabel Google Adsense Code 4
+                    p.FormDescription Content Snippet
+                    textarea.FormInput
+                .FormElement.h_30pxSeparator
+                    label.FormLabel Google Adsense Code 5
+                    p.FormDescription Content Snippet
+                    textarea.FormInput
+                .SiteOptions__w_SaveButton
+                    button.SiteOptions__SaveButton Save Changes
+                    
+
+
+
+                

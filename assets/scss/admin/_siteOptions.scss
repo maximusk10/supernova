@@ -1,0 +1,32 @@
+.w_SiteOptions {
+    width: 100%;
+}
+.SiteOptions__Form {
+    width: 100%;
+}
+.SiteOptions__Subtitle {
+    color: #767D7E;
+    font-size: 25px;
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 90%;
+}
+
+.SiteOptions__w_SaveButton {
+    text-align: center;
+    width: 100%;
+}
+
+.SiteOptions__SaveButton {
+    @extend .Btn;
+    background: $blue-1;
+    margin: 30px auto;
+    padding: 15px 25px;
+}
+
+.h_warn {
+    color: $red-1;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 0; 
+}
