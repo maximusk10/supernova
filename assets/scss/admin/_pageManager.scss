@@ -1,0 +1,93 @@
+.w_PageManager {
+    width: 100%;
+}
+.PageManager__Options {
+    display: flex;
+}
+.PageManager__Filter {
+    width: 80%;
+}
+.PageManager__AddNew {
+    margin: 0 auto;
+    width: 20%;
+}
+.Btn__AddNew {
+    @extend .Btn;
+    background: $blue-1;
+    padding: 15px 0;
+    width: 80%;
+}
+
+.PageManager__TableWrapper {
+    margin: 10px auto;
+    width: 90%;
+}
+.PageManager__Table {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+.PageManager__Thead {
+    td {
+        background: $green-1;
+        color: white;
+        font-weight: bold;
+        padding: 20px 10px;
+        vertical-align: middle;
+    }
+}
+.PageManager__Tbody {
+    tr {
+        td {
+            background: white;
+            border-right: 1px solid rgba(black, .03);
+            color: $dark-2;
+            padding: 10px;
+            vertical-align: middle;
+            a {
+                color: $blue-1;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
+    }
+    tr:nth-child(even) {
+        td {
+            background: #E6F9EC;
+        }
+    }
+    
+}
+
+.h_titleTable {
+    min-width: 350px;
+}
+
+.Btn__Delete {
+    @extend .Btn;
+    background: $red-1;
+    padding: 10px;
+}
+
+.PageManager__PaginationWrapper {
+    width: 100%;
+}
+.PageManager__Pagination {
+    @extend .FormInput;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+}
+
+.Btn__Prev {
+    @extend .Btn;
+    background: $blue-1;
+    margin: 0 10px;
+    padding: 10px 15px;
+}
+.Btn__Next {
+    @extend .Btn;
+    background: $blue-1;
+    margin: 0 10px;
+    padding: 10px 15px;
+}

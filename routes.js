@@ -19,5 +19,6 @@ router.get('/register', sessionExists, auth.register)
 router.post('/register', sessionExists, auth.postRegister)
 // Admin
 router.get('/admin/add_page', admin.addPage)
+router.get('/admin/page_manager', admin.pageManager)
 
 module.exports = router
