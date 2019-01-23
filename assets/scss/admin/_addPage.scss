@@ -1,0 +1,44 @@
+.w_AddPage__Separator {
+    display: flex;
+    flex-wrap: wrap;
+}
+.AddPage__LeftContent {
+    padding: 20px;
+    flex: 3;
+}
+.AddPage__RightContent {
+    width: 20%;
+    padding-right: 60px;
+    padding-top: 20px;
+    flex:1;
+}
+
+.AddPage__PublishBlock {
+    @extend .FormInput;
+    width: 100%;
+    padding: 20px;
+}
+.Btn__Publish {
+    @extend .Btn;
+    width: 90%;
+    background: $green-1;
+}
+.Btn__Draft {
+    @extend .Btn;
+    width: 90%;
+    background: $green-2;
+}
+
+.AddPage__Textarea {
+    min-height: 500px;
+    resize: none;
+}
+
+.AddPage__Input {
+    @extend .FormInput;
+    width: 100%;
+}
+
+.AddPage__CheckboxBlock {
+    @extend .AddPage__PublishBlock;
+}

@@ -1,0 +1,46 @@
+extends ../_layouts/admin.layout.pug
+
+block content
+    main.Content
+        section.w_AddPage
+            .Content__Title
+                h1 Add New Page
+            form.AddPage
+                .FormElement
+                    label.FormLabel(for="") Page Title
+                    input.FormInput(name="")
+
+                .w_AddPage__Separator
+                    .AddPage__LeftContent
+                        .FormElement
+                            label.FormLabel(for="") Content
+                            textarea.FormInput.AddPage__Textarea(name="")
+                    .AddPage__RightContent
+                        .AddPage__RightTitle
+                            p.FormLabel Publish
+                        .AddPage__PublishBlock
+                            button.Btn__Publish Publish Page
+                            button.Btn__Draft Publish Draft
+                        .AddPage__ParentPage
+                            p.FormLabel Parent Page
+                            input.AddPage__Input(name="")
+                        .AddPage__MetaTitle
+                            p.FormLabel Meta Title
+                            input.AddPage__Input(name="")
+                        .AddPage__MetaDescription
+                            p.FormLabel Meta Description
+                            textarea.AddPage__Input(name="")
+                        .AddPage__RightTitle
+                            p.FormLabel No Index?
+                        .AddPage__CheckboxBlock
+                            label.Checkbox__Label Si
+                            input(type="radio")
+                            label.Checkbox__Label No
+                            input(type="radio")
+                        .AddPage__RightTitle
+                            p.FormLabel No Follow?
+                        .AddPage__CheckboxBlock
+                            label.Checkbox__Label Si
+                            input(type="radio")
+                            label.Checkbox__Label No
+                            input(type="radio")

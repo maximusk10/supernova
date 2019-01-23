@@ -65,6 +65,41 @@ input:-webkit-autofill:active {
 .Login__Submit {
   transition: .15s ease-in; }
 
+.Btn, .Btn__Publish, .Btn__Draft {
+  background: black;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  color: white;
+  display: inline-block;
+  font-size: 18px;
+  margin: 7px 0;
+  padding: 10px 0;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); }
+
+.FormElement {
+  width: 100%;
+  margin: 0 auto; }
+
+.FormLabel {
+  color: #376F77;
+  font-size: 20px;
+  display: block;
+  margin: 10px auto;
+  width: 90%; }
+
+.FormInput, .AddPage__PublishBlock, .AddPage__CheckboxBlock, .AddPage__Input {
+  display: block;
+  border-radius: 10px;
+  width: 90%;
+  background: white;
+  border: 0;
+  margin: 0 auto;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  font-size: 20px; }
+
 body {
   background: #1C2324;
   font-size: 40px;
@@ -286,7 +321,8 @@ body {
 
 .Footer {
   background: #C5CDCE;
-  padding: 20px 0; }
+  padding: 20px 0;
+  margin-top: 50px; }
 
 .w_Login__Header {
   background: #151515;
@@ -339,3 +375,36 @@ body {
   max-width: 50%; }
   .Login__Submit:hover {
     background: #2f5f66; }
+
+.w_AddPage__Separator {
+  display: flex;
+  flex-wrap: wrap; }
+
+.AddPage__LeftContent {
+  padding: 20px;
+  flex: 3; }
+
+.AddPage__RightContent {
+  width: 20%;
+  padding-right: 60px;
+  padding-top: 20px;
+  flex: 1; }
+
+.AddPage__PublishBlock, .AddPage__CheckboxBlock {
+  width: 100%;
+  padding: 20px; }
+
+.Btn__Publish {
+  width: 90%;
+  background: #33884F; }
+
+.Btn__Draft {
+  width: 90%;
+  background: #84B795; }
+
+.AddPage__Textarea {
+  min-height: 500px;
+  resize: none; }
+
+.AddPage__Input {
+  width: 100%; }

@@ -3,6 +3,7 @@ const router = express.Router()
 
 const auth = require('./contollers/auth')
 const site = require('./contollers/site')
+const admin = require('./contollers/admin')
 
 const isAuthMiddleware = require('./contollers/middleware/isAuth')
 const sessionExists = require('./contollers/middleware/sessionExists')
@@ -16,5 +17,7 @@ router.post('/login', sessionExists, auth.postLogin)
 router.get('/logout', auth.logout)
 router.get('/register', sessionExists, auth.register)
 router.post('/register', sessionExists, auth.postRegister)
+// Admin
+router.get('/admin/add_page', admin.addPage)
 
 module.exports = router

@@ -8,6 +8,8 @@ $dark-1: #1C2324;
 $dark-2: #151515;
 $orange: #D86D1A;
 $blue-1: #376F77;
+$green-1: #33884F;
+$green-2: #84B795;
 // Font-family
 $font-1: 'Open Sans', serif;
 $font-2: 'Quicksand', serif;
@@ -46,3 +48,42 @@ $font-2: 'Quicksand', serif;
 %transition {
     transition: .15s ease-in;
 }
+
+// Common data
+.Btn {
+    background: black;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(black, .19);
+    cursor: pointer;
+    color: white;
+    display: inline-block;
+    font-size: 18px;
+    margin: 7px 0;
+    padding: 10px 0;
+    text-shadow: 2px 2px 2px rgba(black, .3);
+}
+
+.FormElement {
+    width: 100%;
+    margin: 0 auto;
+}
+.FormLabel {
+    color: #376F77;
+    font-size: 20px;
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+}
+.FormInput {
+    display: block;
+    border-radius: 10px;
+    width: 90%;
+    background: white;
+    border: 0;
+    margin: 0 auto;
+    box-shadow: 0 3px 6px rgba(black, .19);
+    padding: 10px;
+    font-size: 20px;
+}
+
