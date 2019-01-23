@@ -14,7 +14,7 @@ body {
     width: 100%;
 }
 .w_Content {
-    align-content: space-between;
+    align-content: flex-start;
     background: #DDE7E8;
     display: flex;
     flex: $content-width;
@@ -23,6 +23,8 @@ body {
 }
 
 @import "admin/sidebar";
+@import "admin/header";
 @import "admin/content";
 @import "admin/footer";
 @import "admin/login";
+@import "admin/addPage";

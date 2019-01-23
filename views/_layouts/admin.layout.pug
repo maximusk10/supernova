@@ -13,6 +13,8 @@ html
         include ../_components/admin_sidebar.pug
       block main
         .w_Content
+          block header
+            include ../_components/admin_header
           block content
           block footer
             include ../_components/admin_footer.pug

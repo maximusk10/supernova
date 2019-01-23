@@ -1,3 +1,93 @@
 .Content {
+    min-height: 80vh;
     width: 100%;
 }
+
+.Content__Title {
+    margin: 20px;
+    font-size: 32px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(black, .1);
+}
+
+.QuickAccess__Blocks {
+    display: flex;
+}
+.QuickAccess__Block {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(black, .16);
+    margin: 0 15px;
+    padding: 0;
+    overflow: hidden;
+    width: 32%;
+}
+.QuckAccess__BlockTitle {
+
+    padding: 20px 0;
+    h2 {
+        text-align: center;
+        color: white;
+        font-size: 22px;    
+    }
+}
+.QuickAccess__BlockContent {
+    text-align: center;
+    padding: 20px 0;
+    img {
+        max-width: 80%;
+        margin: 0 auto;
+        max-height: 80px;
+    }
+}
+.QuickAccess__BlockLogo {
+
+}
+.QuickAccess__BlockText {
+    color: #376F77;
+    font-weight: bold;
+    padding: 10px;
+    a {
+        color: #376F77;
+        display: block;
+        padding: 5px 0;
+        text-decoration: none;
+    }
+}
+
+.h_quickBlock01 {
+    background: linear-gradient(to right, #99b049 0%,#437f83 100%);
+}
+.h_quickBlock02 {
+    background: linear-gradient(to right, #2193B0 0%, #6DD5ED 100%);
+}
+.h_quickBlock03 {
+    background: linear-gradient(to right, #493240 0%,#FF0099 100%);
+}
+
+.Content__ToDo {
+    padding: 20px 0;
+}
+.ToDo__Wrap {
+    padding: 10px 20px;
+}
+.ToDo__Input {
+    padding: 10px 0 20px 0;
+    input {
+        border-radius: 10px;
+        box-shadow: 0 3px 6px rgba(black, .16);
+        padding: 10px;
+        width: 100%;
+        
+    }
+}
+.ToDo__List {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(black, .16);
+}
+.ToDo__Element {
+    padding: 20px;
+    border-bottom: 1px solid rgba(black, .1);
+}
+
