@@ -1,6 +1,7 @@
 extends ../_layouts/admin.layout.pug
 
 block content
+    
     main.Content
         section.w_AddPage
             .Content__Title
@@ -14,7 +15,12 @@ block content
                     .AddPage__LeftContent
                         .FormElement
                             label.FormLabel(for="") Content
-                            textarea.FormInput.AddPage__Textarea(name="")
+                            .Editor__Wrapper
+                                #editor.AddPage__Textarea
+                                |
+                                function foo(items) {
+                                var x = "All this is syntax highlighted";
+                                return x;
                     .AddPage__RightContent
                         .AddPage__RightTitle
                             p.FormLabel Publish
@@ -44,3 +50,5 @@ block content
                             input(type="radio")
                             label.Checkbox__Label No
                             input(type="radio")
+
+        
