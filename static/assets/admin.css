@@ -386,6 +386,15 @@ body {
   .Login__Submit:hover {
     background: #2f5f66; }
 
+.Login__Error {
+  background: #883336;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%; }
+
 .w_AddPage__Separator {
   display: flex;
   flex-wrap: wrap; }

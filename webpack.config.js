@@ -3,14 +3,15 @@
 var path = require("path");
 
 module.exports = {
-    entry: ['./assets/js/app.js', './assets/js/editor.js', './assets/scss/admin.scss', './assets/scss/main.scss'],
-    // entry: {
-    //     app: './assets/js/app.js',
-    //     editor: './assets/js/editor.js'
-    // },
+    entry: {
+        app: ['./assets/js/app.js', './assets/scss/admin.scss', './assets/scss/main.scss'],
+        editor: ['./assets/js/editor.js'],
+        login: ['./assets/js/login.js']
+    },
+
     mode: 'production',//change to 'development' for non minified js
     output: {
-        path: path.resolve(__dirname, "static"),
+        path: path.resolve(__dirname, "static/assets"),
         filename: '[name].js',
         publicPath: "/static"
     },

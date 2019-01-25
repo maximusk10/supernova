@@ -8,7 +8,7 @@ html(lang="en")
         title #{locals.site.title} - Site Login
         link(href="https://fonts.googleapis.com/css?family=Quicksand:400,700", rel="stylesheet")
         link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700", rel="stylesheet")
-        link(rel="stylesheet", href="/admin.css")
+        link(rel="stylesheet", href="assets/admin.css")
 
     body.Login__Body
         .w_Login__Header
@@ -16,7 +16,7 @@ html(lang="en")
                 h1.Login__Logo--text <span class="h_LogoText">supernova</span><span class="h_LogoTextLight">CMS</span>
         section.Login__Block
             .Login__Avatar
-                img(src="/bullet-club.jpg")
+                img(src="img/bullet-club.jpg")
             form.Login__Form(action="/register", method="POST")
                 .Login__FormElement
                     label.Login__FormLabel(for="penek") Email

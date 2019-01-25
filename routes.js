@@ -13,7 +13,7 @@ router.get('/', site.getIndex)
 router.get('/admin', isAuthMiddleware, site.getAdmin)
 // Auth
 router.get('/login', sessionExists, auth.getLogin)
-router.post('/login', sessionExists, auth.postLogin)
+router.post('/login', auth.postLogin)
 router.get('/logout', auth.logout)
 router.get('/register', sessionExists, auth.register)
 router.post('/register', sessionExists, auth.postRegister)

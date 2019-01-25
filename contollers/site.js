@@ -1,6 +1,5 @@
 
 const { Client } = require('pg')
-
 // Load db config
 const conn = require('./middleware/connectionData')
 const isAuth = require('./middleware/isAuth')
@@ -8,6 +7,7 @@ const client = new Client(conn)
 
 
 exports.getIndex = (req, res, next) => {
+    // throw new Error('Marico No joda')
     res.send('Index pendiente')
 }
 

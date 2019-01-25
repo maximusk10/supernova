@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "ace-builds": "^1.4.2",
+    "axios": "^0.18.0",
     "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",

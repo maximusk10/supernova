@@ -1,5 +1,6 @@
 // Load db config
 const conn = require('./middleware/connectionData')
+const axios = require('axios')
 // Hashing data
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
@@ -8,6 +9,15 @@ const someOtherPlaintextPassword = 'not_bacon';
 
 exports.getLogin = (req, res) => {
     res.render('admin/login')
+    // axios.get('http://localhost:3000/peepepe')
+    //     .then((response) => {
+    //         console.log(response)
+    //     })
+    //     .catch((err) => {
+    //         req.session.error = "error puto"
+    //         console.log(req.session.error)
+    //         res.send('wat')
+    //     })
 }
 
 exports.postLogin = (req, res) => {
@@ -24,13 +34,15 @@ exports.postLogin = (req, res) => {
                                 req.session.name = results.rows[0].name.toString()
                                 req.session.email = results.rows[0].email.toString()
                                 req.session.error = null
+                                req.app.locals.admin.name = results.rows[0].name.toString();
                                 res.redirect('/admin')
                             } else {
-                                res.send('passwords didnt match')
+                                req.app.locals.errors.login = 'Password didnt match'
+                                res.status(401).redirect('/login')
                             }
                         });                            
                     } else {
-                            req.session.error = 'Name is not in the database'
+                        req.app.locals.errors.login = 'User Invalid'
                         res.status(401).redirect('/login')
                     }
                 })

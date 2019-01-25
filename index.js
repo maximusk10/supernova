@@ -58,12 +58,20 @@ app.locals = {
         contact: process.env.EMAIL
     },
     admin: {
-
+        name: null,
+    },
+    errors: {
+        login: null
     }
 };
 
 // Load Router
 app.use('/', routes)
+
+app.use(function (err, req, res, next) {
+    console.error(err.stack)
+    res.status(500).send('Something broke! ' + err)
+})
 
 // Deploy Server
 app.listen(process.env.PORT, () => {

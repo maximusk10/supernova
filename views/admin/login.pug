@@ -6,9 +6,13 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         meta(name="robots", content="noindex, nofollow")
         title #{locals.site.title} - Site Login
+        script(src="https://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", crossorigin="anonymous")
         link(href="https://fonts.googleapis.com/css?family=Quicksand:400,700", rel="stylesheet")
         link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700", rel="stylesheet")
-        link(rel="stylesheet", href="/admin.css")
+        link(href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css", rel="stylesheet")
+        script(src='//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js')
+        link(rel="stylesheet", href="assets/admin.css")
+        script(src="assets/login.js")
 
     body.Login__Body
         .w_Login__Header
@@ -16,13 +20,18 @@ html(lang="en")
                 h1.Login__Logo--text <span class="h_LogoText">supernova</span><span class="h_LogoTextLight">CMS</span>
         section.Login__Block
             .Login__Avatar
-                img(src="/bullet-club.jpg")
-            form.Login__Form(action="/login", method="POST")
+                img(src="img/bullet-club.jpg")
+            if locals.errors.login
+                    .Login__Error
+                        p #{locals.errors.login}
+                        #{ locals.errors.login = null }
+            form.Login__Form(action="/login", method="POST" id="formLogin")
                 .Login__FormElement
-                    label.Login__FormLabel(for="penek") Email
-                    input.Login__FormInput(type="text", name="txtEmail")
+                    label.Login__FormLabel(for="txtEmail") Email
+                    input.Login__FormInput(type="text", name="txtEmail" id="txtEmail")
                 .Login__FormElement
-                    label.Login__FormLabel(for="penek") Password
-                    input.Login__FormInput(type="password", name="txtPassword")
+                    label.Login__FormLabel(for="txtPassword") Password
+                    input.Login__FormInput(type="password", name="txtPassword" id="txtPassword")
                 .Login__FormElement
-                    button.Login__Submit(type="submit") Login
+                    button.Login__Submit#loginBtn(type="submit") Login
+                

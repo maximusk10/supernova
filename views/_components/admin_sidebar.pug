@@ -4,9 +4,9 @@ div.w_Sidebar
             h1.Sidebar__Logo--text <span class="h_LogoText">Supernova</span><span class="h_LogoTextLight">CMS</span>
         section.Sidebar__Profile
             .Profile__Avatar
-                img(src="/bullet-club.jpg")
+                img(src="img/bullet-club.jpg")
             .Profile__Username
-                p.h_userName
+                p.h_userName #{ locals.admin.name }
             .Profile__LogoutBtn
                 a(href="/logout") Logout
         nav.Sidebar__Menu
