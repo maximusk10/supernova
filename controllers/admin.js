@@ -16,3 +16,8 @@ exports.siteOptions = (req, res) => {
 exports.serverOptions = (req, res) => {
     res.render('admin/serverOptions.pug')
 }
+
+// Pages CRUD
+exports.pageAdd = (req, res) => {
+    
+}

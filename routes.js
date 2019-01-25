@@ -1,12 +1,13 @@
 const express = require('express')
 const router = express.Router()
 
-const auth = require('./contollers/auth')
-const site = require('./contollers/site')
-const admin = require('./contollers/admin')
+const auth = require('./controllers/auth')
+const site = require('./controllers/site')
+const admin = require('./controllers/admin')
+const pages = require('./controllers/pages')
 
-const isAuthMiddleware = require('./contollers/middleware/isAuth')
-const sessionExists = require('./contollers/middleware/sessionExists')
+const isAuthMiddleware = require('./controllers/middleware/isAuth')
+const sessionExists = require('./controllers/middleware/sessionExists')
 
 // Routes
 router.get('/', site.getIndex)
@@ -22,5 +23,7 @@ router.get('/admin/add_page', admin.addPage)
 router.get('/admin/page_manager', admin.pageManager)
 router.get('/admin/site_options', admin.siteOptions)
 router.get('/admin/server_options', admin.serverOptions)
+// Pages
+router.get('/admin/page_add', pages.pageAdd)
 
 module.exports = router

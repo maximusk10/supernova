@@ -8,7 +8,7 @@ const express = require('express'),
     
 // Local dependencies
 const routes = require('./routes')
-const pool = require('./contollers/middleware/connectionData')
+const pool = require('./controllers/middleware/connectionData')
 // Load .env
 require('dotenv').config()
 
