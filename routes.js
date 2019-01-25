@@ -5,6 +5,7 @@ const auth = require('./controllers/auth')
 const site = require('./controllers/site')
 const admin = require('./controllers/admin')
 const pages = require('./controllers/pages')
+const media = require('./controllers/media')
 
 const isAuthMiddleware = require('./controllers/middleware/isAuth')
 const sessionExists = require('./controllers/middleware/sessionExists')
@@ -23,11 +24,14 @@ router.get('/admin/add_page', admin.addPage)
 router.get('/admin/page_manager', admin.pageManager)
 router.get('/admin/site_options', admin.siteOptions)
 router.get('/admin/server_options', admin.serverOptions)
+router.get('/admin/add_media', admin.addMedia)
 // Pages
 router.post('/admin/pages', pages.pageAdd)
 router.put('/admin/pages', pages.pageEdit)
 router.delete('/admin/pages/:idx', pages.pageDelete)
 router.get('/admin/pages', pages.pageGetAll)
 router.get('/admin/pages/:idx', pages.pageGet)
+// Media
+router.post('/admin/file', media.addMedia)
 
 module.exports = router

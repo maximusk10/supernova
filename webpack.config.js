@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         app: ['./assets/js/app.js', './assets/scss/admin.scss', './assets/scss/main.scss'],
         editor: ['./assets/js/editor.js'],
+        addMedia: ['./assets/js/addMedia.js'],
         login: ['./assets/js/login.js']
     },
 

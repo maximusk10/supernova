@@ -17,7 +17,6 @@ exports.serverOptions = (req, res) => {
     res.render('admin/serverOptions.pug')
 }
 
-// Pages CRUD
-exports.pageAdd = (req, res) => {
-    
+exports.addMedia = (req, res) => {
+    res.render('admin/addMedia.pug')
 }

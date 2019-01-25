@@ -441,6 +441,38 @@ body {
   width: 100%;
   height: 600px; }
 
+.AddMediaBlock {
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 3px dashed #0087F7;
+  display: flex;
+  margin: 20px auto;
+  padding: 40px 20px;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%; }
+
+.AddMedia__Description {
+  padding: 10px;
+  margin: 0 auto;
+  width: 90%; }
+
+.dz-preview {
+  width: 30%; }
+
+.dz-filename {
+  padding: 10px;
+  word-break: break-all; }
+
+.dz-success-mark {
+  display: none; }
+
+.dz-error-mark {
+  display: none; }
+
 .w_PageManager {
   width: 100%; }
 

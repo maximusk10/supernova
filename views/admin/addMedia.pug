@@ -1,0 +1,13 @@
+extends ../_layouts/admin.layout.pug
+
+block content
+    link(href="/dropzone/dropzone.min.css", rel="stylesheet")
+    script(src="/dropzone/dropzone.min.js")
+    script(src="/assets/addMedia.js")
+    main.Content
+        section.w_AddMedia
+            .Content__Title
+                h1 Add New Files           
+            p.AddMedia__Description Drag files on white area or click to upload files 
+            .AddMedia
+                div#addMedia.AddMediaBlock 

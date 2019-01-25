@@ -5,7 +5,7 @@ const express = require('express'),
     path = require('path'),
     compression = require('compression'),
     pgSession = require('connect-pg-simple')(session);
-    
+    fileUpload = require('express-fileupload')
 // Local dependencies
 const routes = require('./routes')
 const pool = require('./controllers/middleware/connectionData')
@@ -43,6 +43,8 @@ app.set('view engine', 'pug')
 app.use(express.static('static'))
 // Set gzip compression
 app.use(compression())
+// Set fileupload
+app.use(fileUpload());
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -67,6 +69,7 @@ app.locals = {
 
 // Load Router
 app.use('/', routes)
+
 
 app.use(function (err, req, res, next) {
     console.error(err.stack)
