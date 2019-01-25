@@ -1,5 +1,4 @@
 extends ../_layouts/admin.layout.pug
-
 block content
     main.Content
         section.w_PageManager
@@ -51,3 +50,5 @@ block content
                 .PageManager__Pagination
                     .Btn__Prev <i class="fa fa-chevron-left"></i> Prev
                     .Btn__Next <i class="fa fa-chevron-right"></i> Next
+        link(href="/dropzone/dropzone.min.css", rel="stylesheet")
+        script(src="/dropzone/dropzone.min.js")

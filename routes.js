@@ -24,6 +24,10 @@ router.get('/admin/page_manager', admin.pageManager)
 router.get('/admin/site_options', admin.siteOptions)
 router.get('/admin/server_options', admin.serverOptions)
 // Pages
-router.get('/admin/page_add', pages.pageAdd)
+router.post('/admin/pages', pages.pageAdd)
+router.put('/admin/pages', pages.pageEdit)
+router.delete('/admin/pages/:idx', pages.pageDelete)
+router.get('/admin/pages', pages.pageGetAll)
+router.get('/admin/pages/:idx', pages.pageGet)
 
 module.exports = router
