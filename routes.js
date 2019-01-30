@@ -25,6 +25,7 @@ router.get('/admin/page_manager', admin.pageManager)
 router.get('/admin/site_options', admin.siteOptions)
 router.get('/admin/server_options', admin.serverOptions)
 router.get('/admin/add_media', admin.addMedia)
+router.get('/admin/media_manager', admin.mediaManager)
 // Pages
 router.post('/admin/pages', pages.pageAdd)
 router.put('/admin/pages', pages.pageEdit)
@@ -33,5 +34,10 @@ router.get('/admin/pages', pages.pageGetAll)
 router.get('/admin/pages/:idx', pages.pageGet)
 // Media
 router.post('/admin/file', media.addMedia)
+router.get('/admin/file', media.getAllMedia)
+router.get('/admin/file/:id', media.getOneMedia)
+router.delete('/admin/file', media.deleteMedia)
+
+
 
 module.exports = router

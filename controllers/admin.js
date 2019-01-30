@@ -20,3 +20,7 @@ exports.serverOptions = (req, res) => {
 exports.addMedia = (req, res) => {
     res.render('admin/addMedia.pug')
 }
+
+exports.mediaManager = (req, res) => {
+    res.render('admin/mediaManager.pug')
+}

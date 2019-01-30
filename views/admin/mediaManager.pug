@@ -1,0 +1,18 @@
+extends ../_layouts/admin.layout.pug
+block content
+    main.Content
+        section.w_MediaManager
+            .Content__Title
+                h1 File Manager
+            .MediaManager 
+                .MediaManager__Filters
+                    .MediaManager__TextFilter
+                        label(class="FormLabel") Filter:
+                        input(class="FormInput")
+                .MediaManager__FileList
+                .PageManager__PaginationWrapper
+                .PageManager__Pagination
+                    .Btn__Prev <i class="fa fa-chevron-left"></i> Prev
+                    .Btn__Next <i class="fa fa-chevron-right"></i> Next
+    script(src="/assets/mediaManager.js")
+    

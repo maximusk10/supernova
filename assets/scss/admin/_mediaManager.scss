@@ -1,0 +1,51 @@
+.MediaManager {
+    
+    width: 100%;
+}
+.MediaManager__Filters {
+
+}
+.MediaManager__TextFilter {
+
+}
+.MediaManager__FileList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px auto;
+    width: 90%;
+}
+.MediaManager__File {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(black, .16);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    width: 20%;
+}
+.MediaManager__FileImage {
+    text-align: center;
+    img {
+        max-width: 80%;
+        min-height: 100px;
+    }
+}
+.MediaManager__FileName {
+    padding: 10px 0;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.MediaManager__Delete {
+    text-align: center;
+    color: $red-1;
+    font-size: 12px;
+    font-weight: bold;
+    a {
+        color: $red-1;
+    }
+}
+
