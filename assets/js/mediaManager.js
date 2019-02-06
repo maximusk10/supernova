@@ -23,24 +23,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 </div>
             `)
             }
-
-            // let deletes = document.querySelectorAll('.btnDelete')
-            // for (let i = 0; i < deletes.length; i++) {
-            //     const el = deletes[i];
-            //     el.addEventListener('click', (e) => {
-            //         e.preventDefault()
-            //         console.log('pollo')
-            //         axios.delete(`http://localhost:3000/admin/file`, {
-            //             data: {
-            //                 deleteName: e.target.getAttribute('fileid')
-            //             }
-            //         })
-            //         .then((res) => {
-            //             console.log(res.data)
-            //         })
-            //     })
-            // } 
-            
         })
 
     
